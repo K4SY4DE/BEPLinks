@@ -25,3 +25,5 @@ def detalhe_recurso(request, recurso_id):
         'recurso': recurso
     })
    # teste commit 
+     # teste commit 
+       # teste commit 
