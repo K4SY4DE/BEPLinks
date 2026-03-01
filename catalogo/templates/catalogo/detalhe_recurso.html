@@ -13,4 +13,29 @@
 <p><strong>Prestígio:</strong> {{ recurso.prestigio }}</p>
 <p><strong>Data:</strong> {{ recurso.data_catalogacao }}</p>
 
+
+<hr>
+
+<!-- Botão de Voto -->
+<form action="{% url 'votar_prestigio' recurso.id %}" method="post">
+    {% csrf_token %}
+    <button type="submit">👍 Curtir</button>
+</form>
+
+<br>
+
+<!-- Editar -->
+<a href="{% url 'editar_recurso' recurso.id %}">
+    Editar Recurso
+</a>
+
+<br><br>
+
+<!-- Excluir -->
+<a href="{% url 'excluir_recurso' recurso.id %}">
+    Excluir Recurso
+</a>
+
+<br><br>
+
 <a href="{% url 'recursos_por_tema' recurso.tema.id %}">Voltar</a>
