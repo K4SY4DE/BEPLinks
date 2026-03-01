@@ -24,3 +24,4 @@ def detalhe_recurso(request, recurso_id):
     return render(request, 'catalogo/detalhe_recurso.html', {
         'recurso': recurso
     })
+   # teste commit 
