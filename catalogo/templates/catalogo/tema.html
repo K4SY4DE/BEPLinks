@@ -1,0 +1,11 @@
+<h1>Painel de Assuntos</h1>
+
+<ul>
+    {% for tema in temas %}
+        <li>
+            <a href="{% url 'recursos_por_tema' tema.id %}">
+                {{ tema.titulo }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

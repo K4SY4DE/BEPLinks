@@ -1,0 +1,15 @@
+<h1>{{ tema.titulo }}</h1>
+<p>{{ tema.resumo }}</p>
+
+<ul>
+    {% for recurso in recursos %}
+        <li>
+            <a href="{% url 'detalhe_recurso' recurso.id %}">
+                {{ recurso.nome }}
+            </a>
+            - Prestígio: {{ recurso.prestigio }}
+        </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'lista_temas' %}">Voltar</a>

@@ -1,0 +1,16 @@
+<h1>{{ recurso.nome }}</h1>
+
+<p><strong>Descrição:</strong> {{ recurso.descricao }}</p>
+<p><strong>Tipo:</strong> {{ recurso.tipo }}</p>
+<p><strong>Link:</strong> <a href="{{ recurso.url }}">{{ recurso.url }}</a></p>
+<p><strong>Gratuito:</strong> 
+    {% if recurso.gratuito %}
+        Sim
+    {% else %}
+        Pago
+    {% endif %}
+</p>
+<p><strong>Prestígio:</strong> {{ recurso.prestigio }}</p>
+<p><strong>Data:</strong> {{ recurso.data_catalogacao }}</p>
+
+<a href="{% url 'recursos_por_tema' recurso.tema.id %}">Voltar</a>
